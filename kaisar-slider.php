@@ -85,7 +85,7 @@ class Kaisar_Slider {
 	 * Register the custom post type
 	 */
 	public function init() {
-	    register_post_type( 'kaisar_slider', array( 'public' => true, 'label' => 'Kaisar Slider','supports' => array( 'title') ) );
+	    register_post_type( 'kaisar_slider', array( 'public' => true, 'label' => 'Kaisar Slider','supports' => array( 'title'), 'menu_icon' => plugin_dir_url( __FILE__ ).'logo.png', ) );
 
 		add_shortcode( 'kaisar-slider', array( &$this, 'get_shortcode' ));
 	}
