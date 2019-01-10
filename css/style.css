@@ -23,7 +23,7 @@
 
 
   .kaisar-slideshow:hover .kslide-img {
-    animation-play-state: paused;
+    animation-play-state: paused !important;
   }
   
   @keyframes moveSlideshow1 {
