@@ -155,6 +155,7 @@ class Kaisar_Slider {
 		update_post_meta( $post_id, '_image_id', $_POST['upload_image_id'] );
   		update_post_meta( $post_id, '_anim_slider', $_POST['anim_slider'] );
   		update_post_meta( $post_id, '_height_slider', $_POST['height'] );
+  		update_post_meta( $post_id, '_duration_slider', $_POST['duration'] );
 	}
 	
 	
@@ -188,6 +189,7 @@ class Kaisar_Slider {
 
 		$anim_slider = get_post_meta( $post->ID, '_anim_slider', true );
 		$height_slider = get_post_meta( $post->ID, '_height_slider', true );
+		$duration_slider = get_post_meta( $post->ID, '_duration_slider', true );
     	wp_nonce_field( plugin_basename( __FILE__ ), 'slider_box_setting' );
 		?>
     	<table>
@@ -213,6 +215,16 @@ class Kaisar_Slider {
 					<input type="text" name="height" id="height" value="<?php echo (!empty($height_slider))?$height_slider:'';?>">px
 				</td>
 			</tr>
+			<tr class='duration <?php echo ($anim_slider == 2)?"hidden":""?>'>
+				<td>Duration:</td>
+    		</tr>
+    		<tr class='duration <?php echo ($anim_slider == 2)?"hidden":""?>' >
+    			<td>
+    				<label for="duration"></label>
+					<input type="text" name="duration" id="duration" value="<?php echo (!empty($duration_slider))?$duration_slider:'';?>">Detik
+				</td>
+			</tr>
+			
 		</table>
     	<?php
     }
@@ -239,6 +251,7 @@ class Kaisar_Slider {
 		$image_src = wp_get_attachment_url( $image_id );
 		$anim_slider = get_post_meta( $post->ID, '_anim_slider', true );
 		$height = get_post_meta( $post->ID, '_height_slider', true );
+		$duration = get_post_meta( $post->ID, '_duration_slider', true );
 		$height = (!empty($height))?$height:'220';
 
         $args = array(

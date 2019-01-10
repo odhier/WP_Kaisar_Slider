@@ -21,10 +21,10 @@
       margin-right: 10px;
   }
   .kaisar-slideshow.anim_style1 .slide1 {
-    animation: moveSlideshow1 12s linear infinite;
+    animation: moveSlideshow1 20s linear infinite;
   }
   .kaisar-slideshow.anim_style1 .slide2 {
-    animation: moveSlideshow2 12s linear infinite;
+    animation: moveSlideshow2 20s linear infinite;
   }
 
   .kaisar-slideshow:hover .kslide-img {
