@@ -39,6 +39,8 @@ class Kaisar_Slider {
 	    $anim_slider = get_post_meta( $a['id'], '_anim_slider', true );
 		$height = get_post_meta($a['id'], '_height_slider', true );
 		$height = (!empty($height))?$height:'220';
+		
+		$duration = get_post_meta( $post->ID, '_duration_slider', true );
 
         $args = array(
             'post_parent' => $a['id'],

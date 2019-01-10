@@ -20,12 +20,7 @@
   .kslide-img img{
       margin-right: 10px;
   }
-  .kaisar-slideshow.anim_style1 .slide1 {
-    animation: moveSlideshow1 20s linear infinite;
-  }
-  .kaisar-slideshow.anim_style1 .slide2 {
-    animation: moveSlideshow2 20s linear infinite;
-  }
+
 
   .kaisar-slideshow:hover .kslide-img {
     animation-play-state: paused;
